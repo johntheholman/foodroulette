@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Food Roulette</title>
+	<script type='text/javascript' src='config/credentials.js'></script>
+	<meta name='viewport' content='initial-scale=1,width=device-width,user-scalable=no' />
+
+	<link rel='shortcut icon' href='images/favicon@2x.png'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
+
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
+	<link rel='stylesheet' href='./styles/main.css'/>
+	<link rel='stylesheet' href='./styles/landingpage.css'/>
+	<link rel='stylesheet' href='./styles/topbar.css'/>
+	<link rel='stylesheet' href='./styles/bottombar.css'/>
+	<link rel='stylesheet' href='./styles/categories.css'/>
+	<link rel='stylesheet' href='./styles/results.css'/>
+	<link rel='stylesheet' href='./styles/details.css'/>
+	<link rel='stylesheet' href='./styles/input.css'/>
+	<script type='text/javascript' src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+	<script type='text/javascript' src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+	<script type='text/javascript' src='map.js'></script>
+	<script type='text/javascript' src='yelpData.js'></script>
+	<script type='text/javascript' src='weather.js'></script>
+	<script type='text/javascript' src='location.js'></script>
+	<script type='text/javascript' src='main.js'></script>
+</head>
+<body>
+	<div class='main_body'>
+			<div id='inputContainer' class='hide'>
+				<input type='text' id='cityInput' placeholder='City'><button id='cityInputButton'>Submit</button>
+				<p class='cityInputText'>*Your city was not found, please enter it.</p>
+			</div>
+		<div class='landing_page'>
+			<div class='welcome'>
+				<div class='welcome_logo'><img src='images/logo_white.png'></div>
+				<h1>Welcome to<br>Food Roulette</h1>
+				<h3>Your new favorite awaits.</h3>
+				<div class="disclaimer_group">
+					<div class='accept_btn'><button type='button' class='btn btn_success' id='accept'>Continue</button></div>
+				</div>
+			</div>
+
+			<div class='opaque_layer'></div>
+		</div>
+		<div class='display_category_options_page hide'>
+			<div class='spinner hide'><img id='spinnerGif' src='images/spinner.gif'></div>
+			<div class='weather_display'>
+				<div class='logo_container'></div>
+				<div class='app_name'>Food Roulette</div>
+			</div>
+			<div class='yelp_categories'>
+				<h2 class='food-main-title'>Pick a Category</h2>
+				<div class='button-container-food-options'>
+					<div class='pizza-container food-container'>
+						<div class='categ-button' value='pizza'>Pizza</div>
+						<h4 class='food-title'>Pizza</h4>
+					</div>
+					<div class='chinese-container food-container'>
+						<div class='categ-button' value='Chinese'>Chinese</div>
+						<h4 class='food-title'>Chinese</h4>
+					</div>
+					<div class='smokehouse-container food-container'>
+						<div class='categ-button' value='Smokehouse'>Smokehouse</div>
+						<h4 class='food-title'>Smokehouse</h4>
+					</div>
+					<div class='street-vendors food-container'>
+						<div class='categ-button' value='Street Vendors'>Street Vendors</div>
+						<h4 class='food-title'>Street Vendors</h4>
+					</div>
+					<div class='desserts-container food-container'>
+						<div class='categ-button' value='Desserts'>Desserts</div>
+						<h4 class='food-title'>Desserts</h4>
+					</div>
+					<div class='sushi-container food-container'>
+						<div class='categ-button' value='Sushi'>Sushi</div>
+						<h4 class='food-title'>Sushi</h4>
+					</div>
+					<div class='thai-container food-container'>
+						<div class='categ-button' value='Thai'>Thai</div>
+						<h4 class='food-title'>Thai</h4>
+					</div>
+					<div class='vegan-container food-container'>
+						<div class='categ-button' value='Vegan'>Vegan</div>
+						<h4 class='food-title'>Vegan</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='display_restaurant_data_page hide'>
+			<div class='weather_display'>
+				<div class='logo_container'></div>
+				<div class='app_name'>Food Roulette</div>
+			</div>
+			<div class='currentCategory'>Current Category: </div>
+			<div class='restaurant_container'>
+				<div id='foodImages'></div>
+				<h3 id='restaurantName'>Name Of Restaurant</h3>
+				<div class='restaurant_info'></div>
+			</div>
+			<div class='button_containers'>
+					<button class='btn btn_danger' id='noButton'>No</button>
+					<button class='btn btn_success' id='yesButton'>Yes</button>
+			</div>
+		</div>
+		<div class='full_restaurant_page hide'>
+			<div class='map_container'>
+				<div id='map'></div>
+			</div>
+			<div class='restaurant-details'>
+				<div class='full_restaurant_selection'>
+					<h2 class='restaurantName'></h2>
+					<div class='restaurant_info_final_selection'></div>
+					<!-- <div class='featured_image'></div> -->
+				</div>
+				<div class='carouselSlider'>
+					<div id='myCarousel' class='carousel slide' data-ride='carousel'>
+						<!-- Indicators -->
+						<ol class='carousel-indicators'>
+							<li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+							<li data-target='#myCarousel' data-slide-to='1'></li>
+							<li data-target='#myCarousel' data-slide-to='2'></li>
+						</ol>
+	
+						<!-- Wrapper for slides -->
+						<div id='carousel' class='carousel-inner'>
+						</div>
+	
+						<!-- Left and right controls -->
+						<a class='left carousel-control' href='#myCarousel' data-slide='prev'>
+							<span class='glyphicon glyphicon-chevron-left'></span>
+							<span class='sr-only'>Previous</span>
+						</a>
+						<a class='right carousel-control' href='#myCarousel' data-slide='next'>
+							<span class='glyphicon glyphicon-chevron-right'></span>
+							<span class='sr-only'>Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='footer hide'>
+			<img src='images/goBack.png' class='go_back' alt=''>
+			<p class='footer_text'>Categories</p>
+		</div>
+	</div>
+</body>
+</html>

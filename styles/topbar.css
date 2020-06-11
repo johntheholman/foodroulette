@@ -1,0 +1,97 @@
+/* ====== TOP BAR SETTINGS ====== */
+
+.logo_container {
+    height: 80%;
+    width: 15%;
+    position: relative;
+    top: 8%;
+    left: 1%;
+    background-image: url('../images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.app_name {
+    width: 55%;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 20%;
+}
+
+.temp_display, .city_display, .logo_container, .app_name {
+    display:inline-block;
+}
+
+.temp_display, .city_display {
+    width: 8%;
+    font-size: 1rem;
+    position: relative;
+    bottom: 20%;
+    right: 5%;
+}
+
+.weather_display {
+    position: relative;
+    background-color: #455A64;
+    color: #BDBDBD;
+    font-size: 2.0rem;
+    text-align: center;
+    height: 10%;
+}
+
+@media screen and (min-width: 376px) {
+    
+    .app_name {
+        font-size: 2rem;
+    }
+
+    .temp_display, .city_display {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    
+    .app_name {
+        font-size: 2.3rem;
+    }
+
+    .temp_display, .city_display {
+        font-size: 1.4rem;
+    }
+
+    .city_display {
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    
+    .app_name {
+        font-size: 3rem;
+    }
+
+    .temp_display, .city_display {
+        font-size: 2.5rem;
+    }
+
+    .city_display {
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    
+    .app_name {
+        font-size: 6rem;
+    }
+
+    .temp_display, .city_display {
+        font-size: 4rem;
+    }
+
+    .city_display {
+        margin: 0%;
+    }
+}

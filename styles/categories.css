@@ -1,0 +1,192 @@
+/* ====== CATEGORY PAGE SETTINGS ====== */
+
+.display_category_options_page {
+    position: relative;
+    height: 100%;
+}
+
+.yelp_categories {
+    height: 90%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.yelp_categories > h2 {
+    position: relative;
+    top: 2%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.categ-button  {
+    height: 20vmin;
+    width: 27vmin;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.food-container {
+    width: 45vmin;
+    display: inline-block;
+    text-align: center;
+}
+
+.pizza-container div {
+    background: url('../images/pizza.png') center center no-repeat;
+    background-size: contain;
+}
+
+.chinese-container div {
+    background: url('../images/chinese.png') center center no-repeat;
+    background-size: contain;
+}
+
+.smokehouse-container div {
+    background: url('../images/smokehouse.png') center center no-repeat;
+    background-size: contain;
+}
+
+.street-vendors div {
+    background: url('../images/foodTruck.png') center center no-repeat;
+    background-size: contain;
+}
+
+.desserts-container div {
+    background: url('../images/dessert.png') center center no-repeat;
+    background-size: contain;
+}
+
+.sushi-container div {
+    background: url('../images/thai.png') center center no-repeat;
+    background-size: contain;
+}
+
+.thai-container div {
+    background: url('../images/sushi.png') center center no-repeat;
+    background-size: contain;
+}
+
+.vegan-container div {
+    background: url('../images/vegan.png') center center no-repeat;
+    background-size: contain;
+}
+
+.food-title {
+    color: black;
+    margin-top: 0;
+}
+
+.button-container-food-options {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    width: 45%;
+    z-index: 4;
+}
+
+#spinnerGif {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disableClick {
+    pointer-events: none;
+}
+
+@media screen and (min-width: 350px) {
+
+    .food-container {
+        width: 36vmin;
+        height: 27vmin;
+    }
+
+    .categ-button {
+        height: 15vmin;
+        width: 23vmin;
+    }
+}
+
+@media screen and (min-width: 400px) {
+
+    .food-container {
+        width: 35vmin;
+        height: 25vmin;
+    }
+}
+
+@media screen and (min-width: 450px) {
+
+    .button-container-food-options {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .button-container-food-options {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 965px) {
+
+    .button-container-food-options {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .yelp_categories > h2 {
+        font-size: 4rem;
+    }
+    
+    .button-container-food-options {
+        width: 80%;
+    }
+
+    .food-container {
+        width: 37vmin;
+        height: 33vmin;
+    }
+
+    .categ-button {
+        height: 17vmin;
+        width: 25vmin;
+    }
+
+    h4.food-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+
+    .yelp_categories > h2 {
+        font-size: 8rem;
+    }
+    
+    .button-container-food-options {
+        width: 80%;
+    }
+
+    .categ-button {
+        height: 22vmin;
+        width: 28vmin;
+    }
+
+    h4.food-title {
+        font-size: 5rem;
+    }
+}

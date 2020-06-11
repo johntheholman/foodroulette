@@ -1,0 +1,72 @@
+/* ====== MAIN DOCUMENT SETTINGS ====== */
+html {
+    background-color: whitesmoke;
+}
+.main_body {
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.btn_success {
+    color: #fff;
+    background-color: #017BB0;
+    border-color: #017BB0;
+}
+
+.btn_success:hover {
+    color: #fff;
+    background-color: #004f80;
+    border-color: #004f80;
+}
+
+.btn_success:active {
+    color: #fff;
+    background-color: #004f80;
+    border-color: #004f80;
+}
+
+.btn_danger {
+    color: #fff;
+    background-color: #e57373;
+    border-color: #e57373;
+}
+
+.btn_danger:hover {
+    color: #fff;
+    background-color: #af4448;
+    border-color: #af4448;
+}
+
+.btn_danger:active {
+    color: #fff;
+    background-color: #af4448;
+    border-color: #af4448;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
